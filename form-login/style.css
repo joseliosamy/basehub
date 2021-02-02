@@ -31,8 +31,8 @@ form{
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    max-width: 450px;
     margin: 0 20px;
+    max-width: 450px;
     padding: 20px 40px;
     background-color: var(--color-primary);
     box-shadow: 1px 1px 5px var(--color-shadow);
@@ -126,4 +126,15 @@ legend{
 }
 .form-buttons .btn:hover{
     background-color: var(--color-secondary-hover);
+}
+@media(max-width:500px){
+    form{
+        width: 90%;
+    }
+    .form-buttons{
+        flex-direction: column-reverse;
+    }
+    .btn{
+        margin-bottom: 10px;
+    }
 }
