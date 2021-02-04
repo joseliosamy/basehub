@@ -1,0 +1,115 @@
+header{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+.top-header{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 4px 0 5px -5px var(--color-shadow);
+    border-right: 1px solid var(--color-border-light);
+    background-color: var(--color-terciary);
+    position: relative;
+    padding-top: 20px;
+    border-radius: 0 0 60% 0;
+    transition: 310ms border-radius ease-in-out;
+}
+
+.top-header a{
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--color-secondary);
+    margin-bottom: 15px;
+}
+.top-header .hamburguer{
+    font-size: 2rem;
+    color: var(--color-secondary);
+    cursor: pointer;
+    transition: 200ms;
+}
+.top-header .hamburguer:hover{
+    color: var(--color-secondary-hover);
+}
+.top-header .hamburguer:active{
+    transform: scale(0.8,0.8);
+}
+nav{
+    height: 100%;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 50px;
+    box-shadow: 4px 0 5px -5px var(--color-shadow);
+    border-right: 1px solid var(--color-border-light);
+    background-color: var(--color-terciary);
+    transition: 300ms ease-in-out;
+}
+nav a{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    color: var(--color-text-primary);
+    transition: 300ms;
+}
+nav a:hover{
+    background-color: var(--color-secondary);
+    color: var(--color-text-light);
+}
+nav a:hover i{
+    color: var(--color-text-light);
+}
+nav i{
+    color: var(--color-secondary);
+    font-size: 1.5rem;
+    background:transparent;
+}
+nav i:hover{
+    background-color: transparent;
+}
+nav .side-bar{
+    display: none;
+    margin-left: 5px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: 300ms;
+    overflow: hidden;
+}
+nav .nav-text{
+    display: none;
+    animation: text-show 300ms ease-in-out;
+}
+/*MENU FUID*/
+#check{
+    display: none;
+}
+#check:checked ~ .top-header{
+    border-radius: 0 0 0 0;
+}
+#check:checked ~ .side-bar{
+    width: 200px;
+}
+#check:checked ~ .side-bar .nav-text{
+    display: flex;
+}
+
+
+@keyframes text-show{
+    from{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,13 @@
+#landing{
+    height: 100vh;
+    margin-left: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 100;
+    background-color: var(--color-primary);
+}
+.content{
+    width: 100%;
+}
