@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="slide.css">
+</head>
+<body>
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img src="sidebar/Thumbl/1280x720.jpg" id="last-clone" alt="">
+            <img src="form-login/Thumbl/1280x720.jpg" alt="">
+            <img src="form-login/Thumbl/1280x720.jpg" alt="">
+            <img src="sidebar/Thumbl/1280x720.jpg" alt="">
+            <img src="sidebar/Thumbl/1280x720.jpg" alt="">
+            <img src="form-login/Thumbl/1280x720.jpg" id="first-clone" alt="">
+        </div>
+    </div>
+    <button id="prev-btn">Prev</button>
+    <button id="next-btn">Next</button>
+
+    <script>
+        const carouselSlide = document.querySelector('.carousel-slide');
+        const carouselImages = document.querySelectorAll('.carousel-slide img');
+
+        const prevBtn = document.querySelector('#prev-btn')
+        const nextBtn = document.querySelector('#next-btn')
+
+        let counter = 1;
+        const size = carouselImages[0].clientWidth;
+        console.log
+
+        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+
+        nextBtn.addEventListener('click', ()=>{
+            if(counter >= carouselImages.length -1) return;
+            carouselSlide.style.transition = 'transform 0.4s ease-in-out';
+            counter++;
+            carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+        })
+        prevBtn.addEventListener('click', ()=>{
+            if(counter <= 0) return;
+            carouselSlide.style.transition = 'transform 0.4s ease-in-out';
+            counter--;
+            carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+        })
+        carouselSlide.addEventListener('transitionend',()=>{
+            if(carouselImages[counter].id === 'last-clone'){
+                carouselSlide.style.transition = "none";
+                counter = carouselImages.length -2;
+                carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+            }
+            if(carouselImages[counter].id === 'first-clone'){
+                carouselSlide.style.transition = "none";
+                counter = carouselImages.length - counter;
+                carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+            }
+        })
+
+    </script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <title>BaseHub</title>
     <meta charset="UTF-8">
@@ -11,8 +11,8 @@
 </head>
 <body>
     <div id="container">
+        <input id="check" type="checkbox">
         <header>
-            <input id="check" type="checkbox">
 
             <div class="top-header">
                 <a href="#">BaseHub</a>
@@ -27,24 +27,32 @@
 
         </header><!--HEADER-->
 
-
-
-
-
-
-
-
-
-
-
         <main>
             <section id="landing">
                 <div class="content">
-                    <a href="#">Projects</a>
+                    <div class="apresentation">
+                        <h1>Bem vindo ao BaseHub</h1>
+                        <div class="carousel">
+                            <div class="slide-container">
+
+                                <i class='bx bxs-left-arrow' id="prev-btn"></i> 
+
+                                <div class="slide">
+                                    <div class="slide-images">
+                                        <img src="/sidebar/Thumbl/1280x720.jpg" alt="Sidebar" >
+                                        <img src="/form-login/Thumbl/1280x720.jpg" alt="Sidebar">
+                                    </div><!--SLIDE-IMAGES-->
+                                </div><!--SLIDE-->
+
+                                <i class='bx bxs-right-arrow' id="next-btn"></i>
+
+                            </div><!--SLIDE-->
+                        </div><!--SLIDER-CONTAINER-->
+                    </div><!--APRESENTATION-->
                 </div><!--BG-->
             </section><!--LANDING-->
         </main><!--MAIN-->
     </div><!--CONTAINER-->
-    <script src="scripts/side-bar.js"></script>
+    <script src="scripts/carousel.js"></script>
 </body>
 </html>
