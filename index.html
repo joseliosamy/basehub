@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/partials/header.css">
     <link rel="stylesheet" href="styles/partials/landing.css">
+    <link rel="stylesheet" href="../styles/partials/load.css">
+    <link rel="stylesheet" href="../styles/partials/responsive.css">
 </head>
 <body>
     <div id="container">
@@ -32,32 +34,16 @@
                 <div class="content">
                     <div class="apresentation">
                         <h1>Bem vindo ao BaseHub</h1>
-                        
-                        <div class="carousel">
-                            <div class="slide-container">
-
-                                <i class='bx bxs-left-arrow' id="prev-btn"></i> 
-
-                                <div class="slide">
-                                    <div class="slide-images">
-                                        <div class="box-img">
-                                            <img src="/sidebar/Thumbl/1280x720.jpg" class="original" alt="Sidebar" >
-                                        </div>
-                                        <div class="box-img">
-                                            <img src="/form-login/Thumbl/1280x720.jpg" class="original"  alt="Sidebar">
-                                        </div>
-                                    </div><!--SLIDE-IMAGES-->
-                                </div><!--SLIDE-->
-
-                                <i class='bx bxs-right-arrow' id="next-btn"></i>
-
-                            </div><!--SLIDE-->
-                        </div><!--CAROUSEL-->
+                        <p>Confira os Projetos disponíveis.</p>
+                        <a href="/projetos" class="btn-a btn-card">Projetos</a>
                     </div><!--APRESENTATION-->
                 </div><!--BG-->
             </section><!--LANDING-->
         </main><!--MAIN-->
     </div><!--CONTAINER-->
-    <script src="scripts/carousel.js"></script>
+    <div id="load">
+        <div class="spinner"></div>
+    </div>
+    <script src="../scripts/load.js"></script>
 </body>
 </html>

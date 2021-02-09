@@ -1,7 +1,8 @@
 
 main{
+    width: calc(100% - 70px);
+    margin-left: auto;
     transition: margin-left 300ms ease-in-out;
-    margin-left: 70px;
     z-index: -1;
 }
 #landing{
@@ -12,6 +13,7 @@ main{
     position: relative;
 }
 #check:checked ~ main{
+    width: calc(100% - 200px);
     margin-left: 200px;
 }
 .content{
@@ -31,71 +33,12 @@ main{
     font-size: 2.5rem;
     text-align: center;
 }
-.content .carousel{
-    position: absolute;
-    bottom: 10px;
-    width: 230px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #80808080;
-    border-radius: 10px;
-    height: 100px;
-    transition: height 400ms 200ms, width 400ms;
+.content .apresentation .btn-a{
+    width: 200px;
+    height: 50px;
 }
-.content .carousel:hover{
-    width: 300px;
-    height: 130px;
-}
-.content .carousel .slide-container{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.content .carousel .slide-container i{
-    z-index: 1;
-    cursor: pointer;
-    color: var(--color-primary);
-    font-size: 1.5rem;
-    transition: color 200ms;
-}
-.content .carousel .slide-container i:hover{
-    color: var(--color-secondary);
-}
-.content .carousel .slide{
-    width: 100%;
-    height: 100px;
-    display: flex;
-    overflow: hidden;
-    border-radius: 10px;
-}
-.content .carousel .slide-images{
-    display: flex;
-}
-.content .carousel .slide-images .box-img{
-    width: 150px;
-    padding: 5px 0;
-    margin: 0 6px;
-}
-.content .carousel .slide-images .box-img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    cursor: zoom-in;
-}
-.content .carousel .slide-images .modal{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 80%;
-    z-index: 100;
-    margin: 0;
-    border: 1px solid black;
+.content .apresentation p{
+    font-size: .9rem;
 }
 
 
