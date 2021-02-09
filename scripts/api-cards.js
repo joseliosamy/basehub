@@ -1,6 +1,6 @@
 async function consumeCards(){
     try{
-        const response = await fetch('http://localhost:3000/');
+        const response = await fetch('https://api-basehub.herokuapp.com/');
         const data = await response.json();
         show(data)
     }
@@ -21,7 +21,7 @@ function show(cards){
                 </div><!--CARD-HEADER-->
                 <div class="card-body">
                     <div class="rc">
-                        <img src="${card.cardImage}" alt="${card.imageAlt}">
+                        <img src="${card.cardBody.cardImage}" alt="${card.cardBody.imageAlt}">
                     </div>
                     <p>${card.cardBody.descrip}</p>
                     <a href="${card.cardBody.hrefProject}" class="btn-card">Visualizar</a>

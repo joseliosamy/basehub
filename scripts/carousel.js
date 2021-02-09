@@ -35,10 +35,4 @@ carouselImages.forEach(carouselImages=>{
             carouselImages.classList.add('original');
         }
     })
-    carouselImages.addEventListener(e=>{
-        if(e.target.classList.contains('modal')){
-            carouselImages.classList.remove('modal');
-            carouselImages.classList.add('original');
-        }
-    })
 })

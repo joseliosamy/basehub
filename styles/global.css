@@ -10,6 +10,7 @@
     --color-text-light: #ffffff;
     --color-shadow: #80808080;
     --color-border-light: #dadce0;
+    --color-bg-load: rgba(255, 255, 255, 0.973);
 }
 *{
     margin: 0;

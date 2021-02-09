@@ -90,8 +90,8 @@ header{
     overflow: hidden;
 }
 .side-bar .nav-text{
+    animation: text-show 300ms ease-in-out reverse;
     display: none;
-    animation: text-show 300ms ease-in-out;
 }
 /*MENU FUID*/
 #check{
@@ -104,7 +104,8 @@ header{
     width: 200px;
 }
 #check:checked ~ header .side-bar .nav-text{
-    display: flex;
+    display: flex;    
+    animation: text-show 300ms ease-in-out;
 }
 
 
