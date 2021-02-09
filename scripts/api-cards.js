@@ -1,6 +1,6 @@
 async function consumeCards(){
     try{
-        const response = await fetch('https://api-basehub.herokuapp.com/');
+        const response = await fetch('http://localhost:3000/');
         const data = await response.json();
         show(data)
     }
@@ -21,7 +21,7 @@ function show(cards){
                 </div><!--CARD-HEADER-->
                 <div class="card-body">
                     <div class="rc">
-                        <img src="https://basehub.vercel.app/${card.cardBody.image}" alt="${card.cardBody.imageAlt}">
+                        <img src="${card.cardImage}" alt="${card.imageAlt}">
                     </div>
                     <p>${card.cardBody.descrip}</p>
                     <a href="${card.cardBody.hrefProject}" class="btn-card">Visualizar</a>
