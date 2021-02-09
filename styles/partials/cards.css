@@ -1,0 +1,55 @@
+#projects{
+    width: 100%;
+    height: auto;
+}
+#projects h1{
+    text-align: center;
+    font-size: 1.7rem;
+    color: var(--color-secondary);
+}
+.cards{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.cards .card{
+    width: 300px;
+    min-height: 300px;
+    border: 2px solid var(--color-secondary);
+    border-radius: 10px;
+    padding: 20px 20px 0 20px;
+    box-shadow: 2px 1px 7px var(--color-shadow);
+    margin: 10px;
+}
+.cards .card-header{
+    padding: 10px;
+}
+.cards .card-body{
+    font-size: .9rem;
+    padding: 10px 0;
+}
+.cards .card-body .rc{
+    width: 100%;
+}
+.cards .card-body .rc img{
+    width: 100%;
+    box-shadow: 0px 0px 4px var(--color-shadow);
+}
+.cards .card-body .btn-card{
+    width: 110px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-secondary);
+    color: var(--color-text-light);
+    border-radius: 10px;
+    margin: 10px auto;
+    transition: 200ms;
+}
+.cards .card-body .btn-card:hover{
+    background-color: var(--color-secondary-hover);
+}
