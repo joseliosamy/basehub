@@ -21,10 +21,10 @@ function show(cards){
                 </div><!--CARD-HEADER-->
                 <div class="card-body">
                     <div class="rc">
-                        <img src="${card.cardBody.image}" alt="${card.cardBody.imageAlt}">
+                        <img src="https://basehub.vercel.app/${card.cardBody.image}" alt="${card.cardBody.imageAlt}">
                     </div>
                     <p>${card.cardBody.descrip}</p>
-                    <a href="https://basehub.vercel.app/${card.cardBody.hrefProject}" class="btn-card">Visualizar</a>
+                    <a href="${card.cardBody.hrefProject}" class="btn-card">Visualizar</a>
                 </div><!--CARD-BODY-->
             </div><!--CARD-->
 
