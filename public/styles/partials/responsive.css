@@ -1,0 +1,43 @@
+@media(max-width:950px){
+    header{
+        height: 99px;
+        width: 200px;
+    }
+    .side-bar{
+        position: absolute;
+        left: -200px;
+        width: 200px;
+        height: 100vh;
+    }
+    main{
+        width: 100%;
+        margin-top: 100px;
+        margin-left: 0;
+    }
+    #landing .content{
+        height: calc(100vh - 100px);
+    }
+    #projects .content{
+        height: auto;
+    }
+    #check:checked ~ header{
+        height: 100vh;
+    }
+    #check:checked ~ header .top-header{
+        border-radius: 0 0 0 0;
+    }
+    #check:checked ~ header .side-bar{
+        display: flex;
+        left: 0;
+        transition: left 300ms ease-in-out;
+    }
+    #check:checked ~ header .side-bar .nav-text{
+        display: flex;    
+        animation: text-show 300ms ease-in-out;
+    }
+    #check:checked ~ main{
+        width: 100%;
+        margin-left: 0;
+
+    }
+}

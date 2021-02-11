@@ -23,7 +23,6 @@ header{
     transition: 310ms border-radius ease-in-out;
 
 }
-
 .top-header a{
     font-weight: 600;
     font-size: 1.3rem;
@@ -55,6 +54,9 @@ header{
     border-right: 1px solid var(--color-border-light);
     background-color: var(--color-terciary);
     transition: 300ms ease-in-out;
+    font-weight: 500;
+    font-size: 1rem;
+    overflow: hidden;
 }
 .side-bar a{
     width: 100%;
@@ -80,14 +82,6 @@ header{
 }
 .side-bar i:hover{
     background-color: transparent;
-}
-.side-bar .side-bar{
-    display: none;
-    margin-left: 5px;
-    font-weight: 500;
-    font-size: 1rem;
-    transition: 300ms;
-    overflow: hidden;
 }
 .side-bar .nav-text{
     animation: text-show 300ms ease-in-out reverse;
