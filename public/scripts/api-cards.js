@@ -31,4 +31,5 @@ function show(cards){
         `
     }
     document.querySelector('#projects .content .cards').innerHTML = output;
+    load.parentElement.removeChild(load)
 }
