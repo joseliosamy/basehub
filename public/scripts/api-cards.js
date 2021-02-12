@@ -5,6 +5,8 @@ async function consumeCards(){
         show(data)
     }
     catch(error){
+        const errorOut = `<h3 style="text-align:center">Erro ao se conectar com o servidor.</h3>`
+        load.innerHTML = errorOut
         console.log(error);
     }
 }
@@ -12,6 +14,22 @@ consumeCards()
 
 function show(cards){
     let output = "";
+    if(output == ""){
+        setTimeout(()=>{
+            load.style.opacity = '0'
+            setTimeout(()=>{
+                load.parentElement.removeChild(load)
+            },500)
+        }, 1500);
+    }
+    setTimeout(()=>{
+        if(!output != ""){
+            load.style.opacity = '1'
+        }else{
+            load.style.opacity = '0'
+        }
+    },1500);
+
     for(let card of cards){
         output += `
 
@@ -31,5 +49,6 @@ function show(cards){
         `
     }
     document.querySelector('#projects .content .cards').innerHTML = output;
-    load.parentElement.removeChild(load)
-}
+
+    
+    }

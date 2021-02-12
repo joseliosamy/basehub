@@ -1,3 +1,4 @@
+
 main{
     width: calc(100% - 70px);
     transition: margin-left 300ms ease-in-out;
