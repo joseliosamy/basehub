@@ -1,13 +1,51 @@
 @media(max-width:950px){
+    body{
+        min-height: 100vh;
+    }
     header{
-        height: 99px;
-        width: 200px;
+        width: 100%;
+    }
+    .top-header{
+        width: 100%;
+        border-radius: 0;
+        z-index: 1;
     }
     .side-bar{
         position: absolute;
-        left: -200px;
-        width: 200px;
-        height: 100vh;
+        top: -300px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+        height: auto;
+        border: 2px solid var(--color-border-header);
+        border-top: 0;
+        border-radius: 0 0 50px 50px;
+        opacity: 0;
+    }
+    .top-header{
+        border-right: 0;
+    }
+    .top-header::before,
+    .top-header::after{
+        transition: width 300ms ease-in-out;
+    }
+    .top-header::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50%;
+        height: 1px;
+        background-color: var(--color-border-header);
+    }
+    .top-header::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 50%;
+        height: 1px;
+        background-color: var(--color-border-header);
     }
     main{
         width: 100%;
@@ -20,24 +58,27 @@
     #projects .content{
         height: auto;
     }
-    #check:checked ~ header{
-        height: 100vh;
+    .side-bar .nav-text{
+        display: flex;
     }
-    #check:checked ~ header .top-header{
-        border-radius: 0 0 0 0;
+    #check:checked ~ header .top-header::before,
+    #check:checked ~ header .top-header::after{
+        width: 30.3%;
     }
     #check:checked ~ header .side-bar{
+        height: auto;
         display: flex;
-        left: 0;
-        transition: left 300ms ease-in-out;
+        top: 0;
+        transition: top 300ms ease-in-out;
+        opacity: 1;
     }
-    #check:checked ~ header .side-bar .nav-text{
-        display: flex;    
-        animation: text-show 300ms ease-in-out;
+    #check:checked ~ header .side-bar{
+        width: max(40%, 200px);
     }
-    #check:checked ~ main{
-        width: 100%;
-        margin-left: 0;
-
+}
+@media(max-width:500px){
+    #check:checked ~ header .top-header::before,
+    #check:checked ~ header .top-header::after{
+        width: 0;
     }
 }

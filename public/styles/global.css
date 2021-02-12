@@ -1,16 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
 
 :root{
-    --color-primary: #fff;
-    --color-primary-hover: #dbdbdb;
-    --color-secondary: #4285f4;
-    --color-secondary-hover: #276ad6;
-    --color-terciary: #fdfdfd;
-    --color-text-primary: #4d4d4d;
-    --color-text-light: #ffffff;
-    --color-shadow: #80808080;
-    --color-border-light: #dadce0;
-    --color-bg-load: rgba(255, 255, 255, 0.973);
+    --color-primary: #2f5252;
+
+    /*HEADER*/
+
+    --color-header: #117a5e23;
+    --color-border-header: #4e7777a4;
+    --color-text-header: #2f5252;
+    --color-text-light-header: #ffffff;
+    --color-menu-hover: #213b3b;
+
+    /*END HEADER*/
+    
+    /*BODY*/
+
+    --color-border: #4e7777a4;
+    --color-text-dark: #2f5252;
+    --color-text-light: #effffb;
+    --color-shadow: #2f52526c;
+    --color-btn: #2f5252;
+    --color-btn-hover: #213b3b;
+    /*END BODY*/
+
+    /*CARD*/
+
+    --color-bg-card: #ffffff54;
+    /*END CARD*/
+    /*LOAD*/
+
+    --color-load-primary: #f1ffff8e;
+    --color-load-secondary: #2b9c9342;
+    /*END LOAD*/  
+ 
 }
 *{
     margin: 0;
@@ -24,7 +46,10 @@ a{
 body{
     width: 100%;
     height: 100%;
-    background-color: var(--color-primary);
+    background-image: url(../images/background.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #container{
     width: 100%;
@@ -38,12 +63,14 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-secondary);
+    background-color: transparent;
+    background-color: var(--color-btn);
+    backdrop-filter: blur(5px);
     color: var(--color-text-light);
     border-radius: 10px;
     margin: 10px auto;
     transition: 200ms;
 }
 .btn-card:hover{
-    background-color: var(--color-secondary-hover);
+    background-color: var(--color-btn-hover);
 }

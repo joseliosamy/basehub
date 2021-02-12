@@ -1,6 +1,5 @@
 header{
-    height: 100vh;
-    width: 70px;
+    min-width: 70px;
     position: fixed;
     top: 0;
     left: 0;
@@ -15,9 +14,11 @@ header{
     left: 0;
     align-items: center;
     flex-direction: column;
-    box-shadow: 4px 0 5px -5px var(--color-shadow);
-    border-right: 1px solid var(--color-border-light);
-    background-color: var(--color-terciary);
+
+    border-right: 2px solid var(--color-border-header);
+    background-color: var(--color-header);
+    box-shadow: 0 0 100px #ffffff inset;
+
     padding-top: 20px;
     border-radius: 0 0 60% 0;
     transition: 310ms border-radius ease-in-out;
@@ -26,33 +27,42 @@ header{
 .top-header a{
     font-weight: 600;
     font-size: 1.3rem;
-    color: var(--color-secondary);
+
+    color: var(--color-text-header);
+    
     margin-bottom: 15px;
 }
 .top-header .hamburguer{
     font-size: 2rem;
-    color: var(--color-secondary);
+    color: var(--color-text-header);
     cursor: pointer;
     transition: 200ms;
 }
 .top-header .hamburguer:hover{
-    color: var(--color-secondary-hover);
+    transform: scale(1.1,1.1);
+    color: var(--color-menu-hover);
 }
 .top-header .hamburguer:active{
     transform: scale(0.8,0.8);
 }
 .side-bar{
-    height: 100%;
+    height: auto;
     width: 70px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     padding-bottom: 50px;
+    padding-top: 30px;
+    border-radius: 0 0 50px 0;
     margin-top: 99px;
-    box-shadow: 4px 0 5px -5px var(--color-shadow);
-    border-right: 1px solid var(--color-border-light);
-    background-color: var(--color-terciary);
+
+    border-right: 2px solid var(--color-border-header);
+    border-bottom: 2px solid var(--color-border-header);
+    box-shadow: 0 0 100px white inset;
+    background-color: var(--color-header);
+
+    backdrop-filter: blur(6px);
     transition: 300ms ease-in-out;
     font-weight: 500;
     font-size: 1rem;
@@ -64,18 +74,18 @@ header{
     align-items: center;
     justify-content: center;
     padding: 12px;
-    color: var(--color-text-primary);
+    color: var(--color-text-header);  
     transition: 300ms;
 }
 .side-bar a:hover{
-    background-color: var(--color-secondary);
-    color: var(--color-text-light);
+    background-color: var(--color-menu-hover);
+    color: var(--color-text-light-header);
 }
 .side-bar a:hover i{
     color: var(--color-text-light);
 }
 .side-bar i{
-    color: var(--color-secondary);
+    color: var(--color-text-header);
     font-size: 1.5rem;
     margin-right: 5px;
     background:transparent;
