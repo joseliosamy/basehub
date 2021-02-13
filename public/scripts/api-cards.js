@@ -37,12 +37,24 @@ function show(cards){
                 <div class="card-header">
                     <h1>${card.cardHeader.title}</h1>
                 </div><!--CARD-HEADER-->
+
                 <div class="card-body">
+
                     <div class="rc">
                         <img src="${card.cardBody.cardImage}" alt="${card.cardBody.imageAlt}">
+                        <small><i class='bx bx-calendar' ></i>${card.cardBody.date}</small>
                     </div>
                     <p>${card.cardBody.descrip}</p>
-                    <a href="${card.cardBody.hrefProject}" class="btn-card">Visualizar</a>
+                    <div class="links">
+                        <a href="${card.cardBody.hrefProject}" class="btn-card">Visualizar</a>
+
+                        <div class="socials">
+                            <a href="${card.cardBody.repository}" target="_blank" class="btn-card"><i class='bx bxl-github'></i></a>
+                            <a href="${card.cardBody.tutorial}" target="_blank" class="btn-card"><i class='bx bxl-youtube' ></i></a>
+                        </div>
+                    </div>
+
+                    
                 </div><!--CARD-BODY-->
             </div><!--CARD-->
 

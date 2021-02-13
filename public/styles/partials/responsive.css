@@ -75,10 +75,22 @@
     #check:checked ~ header .side-bar{
         width: max(40%, 200px);
     }
+    .cards{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .cards .card{
+        min-width:80%;
+    }
 }
 @media(max-width:500px){
     #check:checked ~ header .top-header::before,
     #check:checked ~ header .top-header::after{
         width: 0;
+    }
+}
+@media(max-width:377px){
+    .cards .card{
+        width: 90%;
     }
 }

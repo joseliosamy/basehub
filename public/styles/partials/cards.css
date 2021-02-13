@@ -41,3 +41,31 @@
     width: 100%;
     box-shadow: 0px 0px 4px var(--color-shadow);
 }
+.cards .card-body .rc small{
+    display: block;
+    text-align: end;
+}
+.cards .card-body .links{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.cards .card-body .links .socials{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.cards .card-body .links .socials a{
+    width: 49%;
+    background-color: var(--color-btn-secondary);
+}
+.cards .card-body .links .socials a:nth-child(1):hover{
+    background-color: rgb(32, 32, 32);
+}
+.cards .card-body .links .socials a:nth-child(2):hover{
+    background-color: rgb(218, 52, 52);
+}
+
+
